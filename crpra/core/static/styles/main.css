@@ -1,0 +1,262 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}  
+
+body {
+	font-family: "San Francisco Text", sans-serif;
+	font-weight: 300;
+	background-color: #dbd4e0;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+h2, h3 {
+        color: #210000;
+}
+
+h4 {
+   color: #3b3450;
+   font-weight: 400;
+   font-size: 14pt;
+   paddding: 0;
+   display: inline;
+   margin-top: 5px;
+   margin-bottom: 10px;
+}
+
+
+h2 {
+       font-weight: 700;
+}
+
+h3 {
+       font-weight: 500;
+}
+
+.displaypanel {
+    width: 85%;
+    padding: 20px;
+}
+
+.groupboxes {
+  display: flex;
+  flex-direction: column; /* Stacks the boxes vertically */
+  gap: 10px; /* Space between each box */
+  width: 100%; /* Ensures the container takes full width */
+}
+
+.box {
+  width: 100%; /* Each box takes full width of its parent */
+  background-color: #fefefe; /* Example background color */
+  padding: 10px; /* Optional padding inside each box */
+  border: 1px solid #ddd; /* Optional border */
+  box-sizing: border-box; /* Ensures padding and border are included in the box width */
+  border-radius: 5px;
+}
+
+.deplist {
+    font-size: 10pt;
+}
+
+.caseurl {
+    float: right;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+        padding: 5px 0;
+}
+
+#content {
+        padding: 0;
+        margin: 0;
+}
+
+#container {
+        margin: 0 auto;
+        padding: 20px;
+        width: 73%;
+        background-color:#e3efec;
+        min-height: 60vh;
+}
+
+
+#cols {
+        display: flex;
+}
+
+#widecol {
+        min-width: 55%;
+}
+
+
+#databox {
+	position: absolute;
+	background-color: #fff3ff;
+	border: solid 1px #bbbbaa;
+	margin: 20px;
+        top: 6vh;
+        padding: 20px;
+	height: 45vh;
+	width: 25%;
+	z-index: 10000;
+        overflow: scroll;
+        border-radius: 3px;
+}
+
+#filterbox {
+	position: absolute;
+	background-color: #fff3ff;
+	border: solid 1px #bbbbaa;
+	margin: 20px;
+        bottom: 20px;
+        padding: 20px;
+	height: auto;
+        max-height: 25vh;
+	width: 25%;
+	z-index: 10000;
+        border-radius: 3px;
+}
+
+#filterbox select {
+        margin: 5px;
+}
+
+.shooting {
+        border-bottom: 1px solid #cccccc;
+        padding: 13px 0px;
+        width: 100%;
+        display: flex; /* Enables Flexbox layout */
+        justify-content: space-between; /* Pushes elements to the left and right */
+}
+
+.shooting:hover, .shooting.active {
+        background-color: #eeeeee;
+}
+
+.shooting a {
+        color: #000033;
+}
+
+.shooting a:hover {
+        color: #666699;
+}
+
+.shootinglabel {
+        font-weight: 500;
+        display: flex;
+        flex-direction: column; /* Arrange child elements vertically */
+}
+
+.shootingperp {
+        font-weight: 100;
+        font-size: 10pt;
+        margin-top: 5px;
+}
+
+a {
+        color: #666699;
+}
+
+a:hover {
+        color: #666666;
+}
+
+.date {
+        font-size: 11pt;
+        color: #999999;        
+}
+
+
+#map {
+	height: 95vh;
+	border-bottom: solid 1px #bbbbaa;
+}
+
+span.clear { clear: left; display: block; }
+
+#header {
+	position: relative;
+	padding: 10px 15px;
+	font-size: 1.25rem;
+	background-color: #210000;
+}
+#header a {
+	color: #d0ffee;
+}
+
+#header a:hover {
+        color: #eeeeff;
+}
+
+#footer {
+	color: #ddffdd;
+	text-align: center;
+	font-weight: 100;
+}
+
+#mast {
+	float:left;
+	font-weight:500;
+}
+
+#mast a, #mast a:hover {
+	color: #d6a549;
+}
+
+#nav {
+	float: right;
+}
+
+.navi {
+	float: left;
+	padding-right: 20px;
+	font-size: 1.15rem;
+}
+
+.search-container {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px;
+        width: 300px;
+        position: absolute;
+        right: 20px;
+        top: 50px;
+        z-index: 10000;
+}
+
+.search-container input[type="text"] {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.search-container input[type="text"]:focus {
+    border: 2px solid #7B7Bcc; /* Thicker border when the text box is focused */
+}
+
+.search-container input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container button img {
+    width: 20px;
+    height: 20px;
+}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %} {{ title }} {% endblock %}
+
+{% block styles %}
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+{% endblock %}
+{% block scripts %}
+{% endblock %}
+
+{% block content %}
+
+<div id="container">
+{% if record %}
+
+<div id="container">
+    <h2>{{ record.outcome }} shooting of {{ record.victim }}</h2>
+    {% if record.lat %} <div id="map" style="width: 100%; height:25vh;"></div> {% endif %}
+    <ul>
+    <li><b>Perpetrator: </b><a href="/deputy/{{ record.officer }}">{{ record.officer }}</a></li>
+    <li><b>Age: </b>{{ record.age }}</li>
+    <li><b>Date: </b>{{ record.date }}</li>
+    <li><b>Case ID: </b>{{ record.id }}</li>
+    <li><b>Weapon: </b>{{ record.weapon }}</li>
+    </ul>
+{% if record.lat %}
+<script>
+var map = L.map('map',{
+            maxZoom: 15,
+            minZoom: 8,
+            zoomControl: false}).setView([{{ record.lat }}, {{ record.lng }}], 11);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 15,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+L.marker([{{ record.lat }}, {{ record.lng }}]).addTo(map);
+</script>
+</div>
+{% endif %}
+
+{% else %}
+We could not find a shooting record with this label.
+{% endif %}
+
+</div>
+
+{% endblock %}
+
