@@ -6,7 +6,7 @@ from sqlalchemy import Table
 
 from core import views
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://yiv:postgres@localhost/postgres'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') # 'postgresql://yiv:postgres@localhost/postgres'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
