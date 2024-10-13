@@ -1,0 +1,3 @@
+[submodule "core/static/js/leaflet.heat"]
+	path = core/static/js/leaflet.heat
+	url = https://github.com/Leaflet/Leaflet.heat.git
