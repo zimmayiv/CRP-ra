@@ -4,5 +4,4 @@ Flask-Migrate==4.0.7
 Flask-SQLAlchemy==3.1.1
 Jinja2==3.1.4
 psycopg2==2.9.9
-regex @ file:///opt/concourse/worker/volumes/live/6d0c2188-eef5-45ba-7cde-604a70bbd9f2/volume/regex_1628063357190/work
 SQLAlchemy==2.0.32
