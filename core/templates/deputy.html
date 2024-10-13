@@ -18,7 +18,7 @@
     <h2>Deputy {{ record.officer }}</h2>
 
     <p>Note that information may be incomplete.</p>
-    <div id="map" style="width: 30vw; float: right;  height: 0;"></div>
+    <div id="map" style="display:none;width: 30vw; float: right;  height: 0;"></div>
     <ul>
     <li><b>Gang affiliations:</b> <ul> {% for gang in record.gangs %} <li>{{ gang.name }}</li> {% endfor %} </ul></li>
     <li><b>Cases implicated:</b> <ul> {% for case in record.cases %} <li>{{ case.title }}</li> {% endfor %} </ul></li>
@@ -32,6 +32,7 @@ const shootings = await shootingPull(null, null, null, "{{ record.officer }}");
 console.log(shootings);
 if (shootings.length > 0) {
     document.getElementById("map").style.height = "40vh";
+    document.getElementById("map").style.display = "block";
     var map = L.map('map',{
                 maxZoom: 15,
                 minZoom: 8,
