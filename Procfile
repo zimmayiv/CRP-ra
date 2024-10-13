@@ -1,1 +1,1 @@
-web: gunicorn crpra.base:app
+web: gunicorn base:app
