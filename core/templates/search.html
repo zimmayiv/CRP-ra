@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %} {{ title }} {% endblock %}
+
+{% block styles %}
+{% endblock %}
+{% block scripts %}
+{% endblock %}
+
+{% block content %}
+
+<div id="container">
+<form class="search-container" action="/search" method="GET" style="right:15%;margin-top:10px;">
+<input type="text" name="query" placeholder="Search for shooting or deputy" />
+<button type="submit">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/512px-Magnifying_glass_icon.svg.png" alt="Search Icon">
+</button>
+</form>
+
+<h2>Search results for "{{ query }}"</h2>
+    <div id="cols">
+	<div id="widecol">
+	<h3>Shootings matching</h3>
+	<ul>
+	{% for s in sh %}
+	    <li><a href="/shooting/{{s.victim}}">Shooting of <b>{{ s.victim }}</b> by {{ s.officer }}</a> <span class="date">({{ s.date }})</span> </li>
+	{% endfor %}
+	</ul>
+	</div>
+
+	<div id="narcol">
+	<h3>Deputies matching</h3>
+	<ul>
+	{% for dep in deps %}
+	    <li><a href="/deputy/{{dep.officer}}">{{ dep.officer }}</a></li>
+	{% endfor %}
+	</ul>
+	</div>
+    </div>
+</div>
+
+{% endblock %}
+
