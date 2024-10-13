@@ -3,11 +3,6 @@ Flask==3.0.3
 Flask-Migrate==4.0.7
 Flask-SQLAlchemy==3.1.1
 Jinja2==3.1.4
-jinja2-time @ file:///tmp/build/80754af9/jinja2-time_1617751524098/work
-json5 @ file:///tmp/build/80754af9/json5_1624432770122/work
-jsonpointer==3.0.0
-jsonschema==4.23.0
-jsonschema-specifications==2023.12.1
 psycopg2==2.9.9
 regex @ file:///opt/concourse/worker/volumes/live/6d0c2188-eef5-45ba-7cde-604a70bbd9f2/volume/regex_1628063357190/work
 SQLAlchemy==2.0.32
